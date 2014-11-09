@@ -9,6 +9,10 @@
     "istanbul": "^0.3.2",
     "mocha": "^2.0.0"
   },
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
   "homepage": "https://github.com/tallesl/format-unicorn",
   "keywords": [
     "string",
@@ -16,8 +20,8 @@
     "formatunicorn",
     "stackexchange"
   ],
-  "license": "ISC",
-  "main": "index.js",
+  "license": "Fair",
+  "main": "./lib/format-unicorn.js",
   "name": "format-unicorn",
   "repository": {
     "type": "git",
@@ -28,3 +32,4 @@
   },
   "version": "1.0.0"
 }
+
