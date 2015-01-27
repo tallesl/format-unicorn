@@ -1,6 +1,6 @@
-var assert = require('assert')
-
-require('../lib/format-unicorn')
+var assert        = require('assert')
+  , formatUnicorn = require('../lib/safe')
+require('../lib/unsafe')
 
 it('should replace correctly when a replacement is provided', function () {
 
@@ -10,10 +10,12 @@ it('should replace correctly when a replacement is provided', function () {
      , replacements = { name: 'Mario' }
 
   // act
-  var actual = toFormat.formatUnicorn(replacements)
+  var actualSafe   = formatUnicorn(toFormat, replacements)
+    , actualUnsafe = toFormat.formatUnicorn(replacements)
 
   // assert
-  assert.strictEqual(actual, expected)
+  assert.strictEqual(actualSafe, expected)
+  assert.strictEqual(actualUnsafe, expected)
 
 })
 
@@ -37,10 +39,12 @@ and the {adjective} {animal} climbed up the spout again.'
     , replacements = { adjective: 'itsy bitsy', animal: 'spider' }
 
   // act
-  var actual = toFormat.formatUnicorn(replacements)
+  var actualSafe   = toFormat.formatUnicorn(replacements)
+    , actualUnsafe = formatUnicorn(toFormat, replacements)
 
   // assert
-  assert.strictEqual(actual, expected)
+  assert.strictEqual(actualSafe, expected)
+  assert.strictEqual(actualUnsafe, expected)
 
 })
 
@@ -54,10 +58,12 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
   // act
-  var actual = expected.formatUnicorn({ })
+  var actualSafe   = expected.formatUnicorn({ })
+    , actualUnsafe = formatUnicorn(expected, { })
 
   // assert
-  assert.strictEqual(actual, expected)
+  assert.strictEqual(actualSafe, expected)
+  assert.strictEqual(actualUnsafe, expected)
 
 })
 

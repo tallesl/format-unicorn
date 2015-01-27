@@ -21,7 +21,7 @@
     "stackexchange"
   ],
   "license": "Fair",
-  "main": "./lib/format-unicorn.js",
+  "main": "./lib/unsafe.js",
   "name": "format-unicorn",
   "repository": {
     "type": "git",
