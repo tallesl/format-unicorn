@@ -16,7 +16,7 @@ A string format function made and used by Stack Exchange on their various websit
 
 ```javascript
 $ npm install format-unicorn
-format-unicorn@1.0.1 node_modules/format-unicorn
+format-unicorn@1.1.0 node_modules/format-unicorn
 $ node
 > require('format-unicorn') // this adds formatUnicorn to String.prototype
 {}
