@@ -18,9 +18,13 @@ A string format function made and used by Stack Exchange on their various websit
 $ npm install format-unicorn
 format-unicorn@1.0.1 node_modules/format-unicorn
 $ node
-> require('format-unicorn')
+> require('format-unicorn') // this adds formatUnicorn to String.prototype
 {}
 > 'we are not in {place} anymore'.formatUnicorn({ place: 'Kansas' })
 'we are not in Kansas anymore'
+> var formatUnicorn = require('format-unicorn/safe') // 'safer' version if you don't want to mess with the prototype
+undefined
+> formatUnicorn('we are not in {place} anymore.', { place: 'Kansas' })
+'we are not in Kansas anymore.'
 ```
 
