@@ -1,5 +1,5 @@
 var assert        = require('assert')
-  , formatUnicorn = require('../lib/safe')
+  , formatUnicorn = require('../safe')
 require('../lib/unsafe')
 
 it('should replace correctly when a replacement is provided', function () {
