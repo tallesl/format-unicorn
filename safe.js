@@ -1,7 +1,6 @@
-var formatUnicorn = require('./lib/format-unicorn')
+const formatUnicorn = require('./format-unicorn')
 
 module.exports = function () {
-  var args = Array.prototype.slice.call(arguments)
+  const args = Array.prototype.slice.call(arguments)
   return formatUnicorn.apply(args.shift(), args)
 }
-

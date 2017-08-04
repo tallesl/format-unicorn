@@ -1,19 +1,15 @@
 {
   "author": "Talles L <talleslasmar@gmail.com>",
   "bugs": {
-    "url": "https://github.com/tallesl/format-unicorn/issues"
+    "url": "https://github.com/tallesl/node-format-unicorn/issues"
   },
-  "description": "Stack Exchange's string format function",
+  "description": "Stack Exchange's string format function.",
   "devDependencies": {
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.3.2",
-    "mocha": "^2.0.0"
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0",
+    "standard": "^10.0.2"
   },
-  "directories": {
-    "lib": "./lib",
-    "test": "./test"
-  },
-  "homepage": "https://github.com/tallesl/format-unicorn",
   "keywords": [
     "string",
     "format",
@@ -21,15 +17,14 @@
     "stackexchange"
   ],
   "license": "Fair",
-  "main": "./lib/unsafe.js",
+  "main": "./unsafe.js",
   "name": "format-unicorn",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tallesl/format-unicorn.git"
+    "url": "https://github.com/tallesl/node-format-unicorn.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "standard && mocha"
   },
   "version": "1.1.0"
 }
-
